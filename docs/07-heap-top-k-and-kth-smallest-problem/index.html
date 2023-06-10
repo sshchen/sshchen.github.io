@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
 <head>
-	<meta name="generator" content="Hugo 0.113.0">
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Acerbo datus maxime#Astris ipse furtiva#Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut olivae sensit arma sorori deducit, inesset crudus, ego vetuere aliis, modo arsit? Utinam rapta fiducia valuere litora adicit cursu, ad faciesSuis quot vota#Ea furtique risere fratres edidit terrae magis. Colla tam mihi tenebat: miseram excita suadent es pecudes iam. Concilio quam velatus posset ait quod nunc!">
+<meta name="description" content="Selected problems - Heap#Problem # Problem Name Difficulty LeetCode Link 9 Kth Largest Element in an Array medium Link 56 Merge k Sorted Lists hard Link 58 Find Median from Data Stream hard Link 60 Kth Smallest Element in a Sorted Matrix medium Link 98 Top K Frequent Words medium Link Others#Problem # Problem Name Difficulty LeetCode Link 9 Kth Largest Element in an Array medium Link 68 K Closest Points to Origin medium Link 84 Kth Largest Element in a Stream easy Link 206 Top K Frequent Elements medium Link 100 Sort Characters By Frequency medium Link 102 Third Maximum Number easy Link 819 Ugly Number II medium Link 312 Find K Pairs with Smallest Sums medium Link 72 Minimum Cost to Hire K Workers hard Link 313 Reconstruct Itinerary medium Link 322 Trapping Rain Water II hard Link 323 Cheapest Flights Within K Stops medium Link ">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Introduction" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://sshchen.github.io/" />
-<title>Introduction | Algorithm</title>
+<meta property="og:url" content="https://sshchen.github.io/docs/07-heap-top-k-and-kth-smallest-problem/" />
+<title>07 Heap, Top K and Kth Smallest Problem | Algorithm</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
   <script defer src="/en.search.min.91b5d9fa9cd92f3687dd6e0d4c403582f5f368537ce69fd46f4d415965d5357e.js" integrity="sha256-kbXZ&#43;pzZLzaH3W4NTEA1gvXzaFN85p/Ub01BWWXVNX4=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://sshchen.github.io/index.xml" title="Algorithm" />
+<link rel="alternate" type="application/rss+xml" href="https://sshchen.github.io/docs/07-heap-top-k-and-kth-smallest-problem/index.xml" title="Algorithm" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -194,9 +193,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-f8d98edec2b9e6e422b5f95b1c3a30ed" class="toggle"  />
+    <input type="checkbox" id="section-f8d98edec2b9e6e422b5f95b1c3a30ed" class="toggle" checked />
     <label for="section-f8d98edec2b9e6e422b5f95b1c3a30ed" class="flex justify-between">
-      <a href="/docs/07-heap-top-k-and-kth-smallest-problem/" class="">07 Heap, Top K and Kth Smallest Problem</a>
+      <a href="/docs/07-heap-top-k-and-kth-smallest-problem/" class="active">07 Heap, Top K and Kth Smallest Problem</a>
     </label>
   
 
@@ -370,7 +369,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Introduction</strong>
+  <strong>07 Heap, Top K and Kth Smallest Problem</strong>
 
   <label for="toc-control">
     
@@ -386,8 +385,12 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#tempora-nisi-nunc">Tempora nisi nunc</a></li>
-    <li><a href="#locis-suis-novi-cum-suoque-decidit-eadem">Locis suis novi cum suoque decidit eadem</a></li>
+    <li>
+      <ul>
+        <li><a href="#selected-problems---heap">Selected problems - Heap</a></li>
+        <li><a href="#others">Others</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -400,54 +403,140 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="acerbo-datus-maxime">
-  Acerbo datus maxime
-  <a class="anchor" href="#acerbo-datus-maxime">#</a>
-</h1>
-<div class="book-columns flex flex-wrap">
-
-  <div class="flex-even markdown-inner">
-    <h2 id="astris-ipse-furtiva">
-  Astris ipse furtiva
-  <a class="anchor" href="#astris-ipse-furtiva">#</a>
-</h2>
-<p>Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit <strong>arma sorori</strong> deducit, inesset <strong>crudus</strong>, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora <em>adicit cursu</em>, ad facies
-  </div>
-
-  <div class="flex-even markdown-inner">
-    <h2 id="suis-quot-vota">
-  Suis quot vota
-  <a class="anchor" href="#suis-quot-vota">#</a>
-</h2>
-<p>Ea <em>furtique</em> risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio <em>quam</em> velatus posset ait quod
-nunc! Fragosis suae dextra geruntur functus vulgata.
-  </div>
-
-</div>
-
-<h2 id="tempora-nisi-nunc">
-  Tempora nisi nunc
-  <a class="anchor" href="#tempora-nisi-nunc">#</a>
-</h2>
-<p>Lorem <strong>markdownum</strong> emicat gestu. Cannis sol pressit ducta. <strong>Est</strong> Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!</p>
-<pre><code>var panel = ram_design;
-if (backup + system) {
-    file.readPoint = network_native;
-    sidebar_engine_device(cell_tftp_raster,
-            dual_login_paper.adf_vci.application_reader_design(
-            graphicsNvramCdma, lpi_footer_snmp, integer_model));
-}
-</code></pre>
-<h2 id="locis-suis-novi-cum-suoque-decidit-eadem">
-  Locis suis novi cum suoque decidit eadem
-  <a class="anchor" href="#locis-suis-novi-cum-suoque-decidit-eadem">#</a>
-</h2>
-<p>Idmoniae ripis, at aves, ali missa adest, ut <em>et autem</em>, et ab?</p>
+  <article class="markdown"><h3 id="selected-problems---heap">
+  Selected problems - Heap
+  <a class="anchor" href="#selected-problems---heap">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Problem #</th>
+<th>Problem Name</th>
+<th>Difficulty</th>
+<th>LeetCode Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>Kth Largest Element in an Array</td>
+<td>medium</td>
+<td><a href="https://leetcode.com/problems/kth-largest-element-in-an-array/">Link</a></td>
+</tr>
+<tr>
+<td>56</td>
+<td>Merge k Sorted Lists</td>
+<td>hard</td>
+<td><a href="https://leetcode.com/problems/merge-k-sorted-lists/">Link</a></td>
+</tr>
+<tr>
+<td>58</td>
+<td>Find Median from Data Stream</td>
+<td>hard</td>
+<td><a href="https://leetcode.com/problems/find-median-from-data-stream/">Link</a></td>
+</tr>
+<tr>
+<td>60</td>
+<td>Kth Smallest Element in a Sorted Matrix</td>
+<td>medium</td>
+<td><a href="https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/">Link</a></td>
+</tr>
+<tr>
+<td>98</td>
+<td>Top K Frequent Words</td>
+<td>medium</td>
+<td><a href="https://leetcode.com/problems/top-k-frequent-words/">Link</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="others">
+  Others
+  <a class="anchor" href="#others">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Problem #</th>
+<th>Problem Name</th>
+<th>Difficulty</th>
+<th>LeetCode Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>Kth Largest Element in an Array</td>
+<td>medium</td>
+<td><a href="https://leetcode.com/problems/kth-largest-element-in-an-array/">Link</a></td>
+</tr>
+<tr>
+<td>68</td>
+<td>K Closest Points to Origin</td>
+<td>medium</td>
+<td><a href="https://leetcode.com/problems/k-closest-points-to-origin/">Link</a></td>
+</tr>
+<tr>
+<td>84</td>
+<td>Kth Largest Element in a Stream</td>
+<td>easy</td>
+<td><a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/">Link</a></td>
+</tr>
+<tr>
+<td>206</td>
+<td>Top K Frequent Elements</td>
+<td>medium</td>
+<td><a href="https://leetcode.com/problems/top-k-frequent-elements/">Link</a></td>
+</tr>
+<tr>
+<td>100</td>
+<td>Sort Characters By Frequency</td>
+<td>medium</td>
+<td><a href="https://leetcode.com/problems/sort-characters-by-frequency/">Link</a></td>
+</tr>
+<tr>
+<td>102</td>
+<td>Third Maximum Number</td>
+<td>easy</td>
+<td><a href="https://leetcode.com/problems/third-maximum-number/">Link</a></td>
+</tr>
+<tr>
+<td>819</td>
+<td>Ugly Number II</td>
+<td>medium</td>
+<td><a href="https://leetcode.com/problems/ugly-number-ii/">Link</a></td>
+</tr>
+<tr>
+<td>312</td>
+<td>Find K Pairs with Smallest Sums</td>
+<td>medium</td>
+<td><a href="https://leetcode.com/problems/find-k-pairs-with-smallest-sums/">Link</a></td>
+</tr>
+<tr>
+<td>72</td>
+<td>Minimum Cost to Hire K Workers</td>
+<td>hard</td>
+<td><a href="https://leetcode.com/problems/minimum-cost-to-hire-k-workers/">Link</a></td>
+</tr>
+<tr>
+<td>313</td>
+<td>Reconstruct Itinerary</td>
+<td>medium</td>
+<td><a href="https://leetcode.com/problems/reconstruct-itinerary/">Link</a></td>
+</tr>
+<tr>
+<td>322</td>
+<td>Trapping Rain Water II</td>
+<td>hard</td>
+<td><a href="https://leetcode.com/problems/trapping-rain-water-ii/">Link</a></td>
+</tr>
+<tr>
+<td>323</td>
+<td>Cheapest Flights Within K Stops</td>
+<td>medium</td>
+<td><a href="https://leetcode.com/problems/cheapest-flights-within-k-stops/">Link</a></td>
+</tr>
+</tbody>
+</table>
 </article>
  
       
@@ -489,8 +578,12 @@ if (backup + system) {
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#tempora-nisi-nunc">Tempora nisi nunc</a></li>
-    <li><a href="#locis-suis-novi-cum-suoque-decidit-eadem">Locis suis novi cum suoque decidit eadem</a></li>
+    <li>
+      <ul>
+        <li><a href="#selected-problems---heap">Selected problems - Heap</a></li>
+        <li><a href="#others">Others</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

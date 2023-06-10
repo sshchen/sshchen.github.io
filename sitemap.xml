@@ -2,17 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/posts/my-first-post/</loc>
-    <lastmod>2023-06-09T21:57:26-07:00</lastmod>
+    <loc>https://sshchen.github.io/docs/01-binary-search/</loc>
   </url><url>
-    <loc>http://example.org/</loc>
-    <lastmod>2023-06-09T21:57:26-07:00</lastmod>
+    <loc>https://sshchen.github.io/docs/02-two-pointers/</loc>
   </url><url>
-    <loc>http://example.org/posts/</loc>
-    <lastmod>2023-06-09T21:57:26-07:00</lastmod>
+    <loc>https://sshchen.github.io/docs/03-linkedlist/</loc>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://sshchen.github.io/docs/04-sliding-window-prefix-sum/</loc>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://sshchen.github.io/docs/05-binary-tree-binary-search-tree/</loc>
+  </url><url>
+    <loc>https://sshchen.github.io/docs/06-binary-tree-recursion/</loc>
+  </url><url>
+    <loc>https://sshchen.github.io/docs/07-heap-top-k-and-kth-smallest-problem/</loc>
+  </url><url>
+    <loc>https://sshchen.github.io/docs/08-sweep-line-mono-stack/</loc>
+  </url><url>
+    <loc>https://sshchen.github.io/docs/09-graph-i-and-union-find/</loc>
+  </url><url>
+    <loc>https://sshchen.github.io/docs/10-graph-ii-practice-on-dfs-and-bfs-bfs-advanced/</loc>
+  </url><url>
+    <loc>https://sshchen.github.io/docs/11-graph-iii-backtracking/</loc>
+  </url><url>
+    <loc>https://sshchen.github.io/docs/12-graph-iv-trie-graph-theory-comprehensive-practice-and-review/</loc>
+  </url><url>
+    <loc>https://sshchen.github.io/docs/13-data-structure-design/</loc>
+  </url><url>
+    <loc>https://sshchen.github.io/categories/</loc>
+  </url><url>
+    <loc>https://sshchen.github.io/docs/</loc>
+  </url><url>
+    <loc>https://sshchen.github.io/</loc>
+  </url><url>
+    <loc>https://sshchen.github.io/tags/</loc>
   </url>
 </urlset>
