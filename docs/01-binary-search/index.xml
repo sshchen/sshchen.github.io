@@ -17,6 +17,15 @@
     
     <item>
       <title></title>
+      <link>https://sshchen.github.io/docs/01-binary-search/13.-search-in-rotated-sorted-array/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sshchen.github.io/docs/01-binary-search/13.-search-in-rotated-sorted-array/</guid>
+      <description>class Solution { public int search(int[] nums, int target) { int i = 0, j = nums.length - 1; if (target &amp;gt;= nums[0]) { while (i &amp;lt;= j) { int m = i + (j - i) / 2; if (nums[m] == target) { return m; } else if (nums[m] &amp;lt; target &amp;amp;&amp;amp; nums[m] &amp;gt;= nums[0]) { i = m + 1; } else { j = m - 1; } } } else { while (i &amp;lt;= j) { int m = i + (j - i) / 2; if (nums[m] == target) { return m; } else if (nums[m] &amp;gt; target &amp;amp;&amp;amp; nums[m] &amp;lt; nums[0]) { j = m - 1; } else { i = m + 1; } } } return -1; } } Time: O(logn) Space: O(1) </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://sshchen.github.io/docs/01-binary-search/5.-binary-search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
