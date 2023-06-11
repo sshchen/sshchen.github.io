@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
+<meta name="description" content="class Solution { public int search(int[] nums, int target) { int i = 0, j = nums.length - 1; while (i &lt;= j) { int m = i &#43; (j - i) / 2; // (j &#43; i) / 2 migth cause integer out of bound if (nums[m] == target) { return m; } if (nums[m] &lt; target) { i = m &#43; 1; } else { j = m - 1; } } return -1; } } Time: O(logn) Space: O(1) ">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Docs" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://sshchen.github.io/docs/" />
-<title>Docs | Algorithm</title>
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="class Solution { public int search(int[] nums, int target) { int i = 0, j = nums.length - 1; while (i &lt;= j) { int m = i &#43; (j - i) / 2; // (j &#43; i) / 2 migth cause integer out of bound if (nums[m] == target) { return m; } if (nums[m] &lt; target) { i = m &#43; 1; } else { j = m - 1; } } return -1; } } Time: O(logn) Space: O(1) " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sshchen.github.io/docs/01-binary-search/5.-binary-search/" /><meta property="article:section" content="docs" />
+
+
+<title>5. Binary Search | Algorithm</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
   <script defer src="/en.search.min.c4a7d872d67d4c0940f873289919d595c87888aea7ccdbe3b15404cf7ca147ea.js" integrity="sha256-xKfYctZ9TAlA&#43;HMomRnVlch4iK6nzNvjsVQEz3yhR&#43;o=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://sshchen.github.io/docs/index.xml" title="Algorithm" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -67,7 +68,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-5c166846fc154a8f95f2000a3c6579c2" class="toggle"  />
+    <input type="checkbox" id="section-5c166846fc154a8f95f2000a3c6579c2" class="toggle" checked />
     <label for="section-5c166846fc154a8f95f2000a3c6579c2" class="flex justify-between">
       <a href="/docs/01-binary-search/" class="">01 Binary Search</a>
     </label>
@@ -83,7 +84,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/01-binary-search/5.-binary-search/" class="">5. Binary Search</a>
+    <a href="/docs/01-binary-search/5.-binary-search/" class="active">5. Binary Search</a>
   
 
         </li>
@@ -382,7 +383,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Docs</strong>
+  <strong>5. Binary Search</strong>
 
   <label for="toc-control">
     
@@ -396,7 +397,7 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-
+<nav id="TableOfContents"></nav>
 
 
 
@@ -407,7 +408,28 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"></article>
+  <article class="markdown"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">search</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">,</span> j <span style="color:#f92672">=</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;=</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> m <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">-</span> i<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">;</span> <span style="color:#75715e">// (j + i) / 2 migth cause integer out of bound
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>m<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> m<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>m<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                i <span style="color:#f92672">=</span> m <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                j <span style="color:#f92672">=</span> m <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>Time: O(logn)</li>
+<li>Space: O(1)</li>
+</ul>
+</article>
  
       
 
@@ -432,6 +454,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -442,7 +468,7 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-
+<nav id="TableOfContents"></nav>
 
 
  
