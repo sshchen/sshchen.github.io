@@ -22,7 +22,7 @@
       
       <guid>https://sshchen.github.io/docs/01-binary-search/13.-search-in-rotated-sorted-array/</guid>
       <description>M1: binary search + strict ascending range
-class Solution { public int search(int[] nums, int target) { int i = 0, j = nums.length - 1; if (target &amp;gt;= nums[0]) { while (i &amp;lt;= j) { int m = i + (j - i) / 2; if (nums[m] == target) { return m; } else if (nums[m] &amp;gt;= nums[0] &amp;amp;&amp;amp; nums[m] &amp;lt; target) { i = m + 1; } else { j = m - 1; } } } else { while (i &amp;lt;= j) { int m = i + (j - i) / 2; if (nums[m] == target) { return m; } else if (nums[m] &amp;lt; nums[0] &amp;amp;&amp;amp; nums[m] &amp;gt; target) { j = m - 1; } else { i = m + 1; } } } return -1; } } Time: O(logn) Space: O(1) M2: binary search + find largest element index in rotated sorted array</description>
+class Solution { public int search(int[] nums, int target) { int i = 0, j = nums.length - 1; if (target &amp;gt;= nums[0]) { while (i &amp;lt;= j) { int m = i + (j - i) / 2; if (nums[m] == target) { return m; } else if (nums[m] &amp;gt;= nums[0] &amp;amp;&amp;amp; nums[m] &amp;lt; target) { i = m + 1; } else { j = m - 1; } } } else { while (i &amp;lt;= j) { int m = i + (j - i) / 2; if (nums[m] == target) { return m; } else if (nums[m] &amp;lt; nums[0] &amp;amp;&amp;amp; nums[m] &amp;gt; target) { j = m - 1; } else { i = m + 1; } } } return -1; } } class Solution { public int search(int[] arr, int target) { int left = 0, right = arr.</description>
     </item>
     
     <item>
@@ -32,6 +32,15 @@ class Solution { public int search(int[] nums, int target) { int i = 0, j = nums
       
       <guid>https://sshchen.github.io/docs/01-binary-search/5.-binary-search/</guid>
       <description>class Solution { public int search(int[] nums, int target) { int i = 0, j = nums.length - 1; while (i &amp;lt;= j) { int m = i + (j - i) / 2; // (j + i) / 2 migth cause integer out of bound if (nums[m] == target) { return m; } if (nums[m] &amp;lt; target) { i = m + 1; } else { j = m - 1; } } return -1; } } Time: O(logn) Space: O(1) </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sshchen.github.io/docs/01-binary-search/81.-search-in-rotated-sorted-array-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sshchen.github.io/docs/01-binary-search/81.-search-in-rotated-sorted-array-ii/</guid>
+      <description>class Solution { public boolean search(int[] nums, int target) { int left = 0, right = nums.length - 1; while (left &amp;lt;= right) { int mid = left + (right - left) / 2; if (nums[mid] == target) { return true; } if (nums[mid] == nums[left]) { left++; continue; } if (nums[mid] &amp;gt; nums[left]) { if (nums[left] &amp;lt;= target &amp;amp;&amp;amp; target &amp;lt; nums[mid]) { right = mid - 1; } else { left = mid + 1; } } else { if (nums[mid] &amp;lt; target &amp;amp;&amp;amp; target &amp;lt;= nums[right]) { left = mid + 1; } else { right = mid - 1; } } } return false; } } Time: O(logn) Space: O(1) </description>
     </item>
     
   </channel>
