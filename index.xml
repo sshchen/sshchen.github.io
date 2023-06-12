@@ -22,7 +22,7 @@
       
       <guid>https://sshchen.github.io/docs/01-binary-search/13.-search-in-rotated-sorted-array/</guid>
       <description>M1: binary search + strict ascending range
-class Solution { public int search(int[] nums, int target) { int i = 0, j = nums.length - 1; if (target &amp;gt;= nums[0]) { while (i &amp;lt;= j) { int m = i + (j - i) / 2; if (nums[m] == target) { return m; } else if (nums[m] &amp;gt;= nums[0] &amp;amp;&amp;amp; nums[m] &amp;lt; target) { i = m + 1; } else { j = m - 1; } } } else { while (i &amp;lt;= j) { int m = i + (j - i) / 2; if (nums[m] == target) { return m; } else if (nums[m] &amp;lt; nums[0] &amp;amp;&amp;amp; nums[m] &amp;gt; target) { j = m - 1; } else { i = m + 1; } } } return -1; } } Time: O(logn) Space: O(1) M2: binary search + find pivot</description>
+class Solution { public int search(int[] nums, int target) { int i = 0, j = nums.length - 1; if (target &amp;gt;= nums[0]) { while (i &amp;lt;= j) { int m = i + (j - i) / 2; if (nums[m] == target) { return m; } else if (nums[m] &amp;gt;= nums[0] &amp;amp;&amp;amp; nums[m] &amp;lt; target) { i = m + 1; } else { j = m - 1; } } } else { while (i &amp;lt;= j) { int m = i + (j - i) / 2; if (nums[m] == target) { return m; } else if (nums[m] &amp;lt; nums[0] &amp;amp;&amp;amp; nums[m] &amp;gt; target) { j = m - 1; } else { i = m + 1; } } } return -1; } } Time: O(logn) Space: O(1) M2: binary search + find largest element index in rotated sorted array</description>
     </item>
     
     <item>
