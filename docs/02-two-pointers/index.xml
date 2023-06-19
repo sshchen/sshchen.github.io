@@ -8,6 +8,16 @@
     <language>en-us</language><atom:link href="https://sshchen.github.io/docs/02-two-pointers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
+      <link>https://sshchen.github.io/docs/02-two-pointers/307.-3sum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sshchen.github.io/docs/02-two-pointers/307.-3sum/</guid>
+      <description>M1: Two Pointers (for + 2sum + dedup)
+class Solution { public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; threeSum(int[] nums) { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; res = new ArrayList&amp;lt;&amp;gt;(); Arrays.sort(nums); for (int i = 0; i &amp;lt; nums.length; i++) { if (i &amp;gt; 0 &amp;amp;&amp;amp; nums[i] == nums[i - 1]) { continue; } int target = -nums[i]; int j = i + 1, k = nums.length - 1; while (j &amp;lt; k) { if (nums[j] + nums[k] == target) { res.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://sshchen.github.io/docs/02-two-pointers/4.-two-sum/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
